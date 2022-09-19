@@ -12,14 +12,14 @@ export const Landing = () => {
           <span className='block'>Driven By values</span>
         </h1>
 
-        <div>
+        <div className='space-x-8'>
           <Button title='Buy now' />
           <a href="#" className='link'>learn more</a>
         </div>
       </div>
 
       <div className='relative hidden h-[450px] w-[450px] transition-all duration-500 md:inline lg:h-[650px] lg:w-[600px]'>
-        <Image src='/iphone.png' layout='fill' objectFit='contain' />
+        <Image src='/iphone.png' layout='fill' objectFit='contain' alt='phone' />
       </div>
     </section>
   )
