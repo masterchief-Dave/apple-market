@@ -4,7 +4,7 @@
 /node_modules
 ./node_modules
 /sanity/apple-market-admin/node_modules
-/sanity/orchid-dolphin
+
 /.pnp
 .pnp.js
 /applemarket
