@@ -13,7 +13,7 @@ export const Header = () => {
       <div className='flex items-center justify-center md:w-1/5'>
         <Link href='/'>
           <section className='relative w-5 cursor-pointer opacity-75 hover:opacity-100 h-10'>
-            <Image src='https://apple-redesign-yt.vercel.app/_next/image?url=https%3A%2F%2Frb.gy%2Fvsvv2o&w=1080&q=75' layout='fill' objectFit='contain' />
+            <Image src='https://apple-redesign-yt.vercel.app/_next/image?url=https%3A%2F%2Frb.gy%2Fvsvv2o&w=1080&q=75' layout='fill' objectFit='contain' alt='logo'/>
           </section>
         </Link>
       </div>
@@ -33,7 +33,7 @@ export const Header = () => {
         </Link>
 
         {session ? (
-          <Image src='' width={34} height={34} className='cursor-pointer rounded-full' />
+          <Image src='' width={34} height={34} className='cursor-pointer rounded-full' alt='user'/>
         ) : <UserIcon className='headerIcon' onClick={() => signIn()} />}
       </div>
     </header>

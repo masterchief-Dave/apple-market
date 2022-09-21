@@ -1,7 +1,10 @@
+import { RiMacbookLine } from "react-icons/ri";
+
 export default {
   name: 'product',
   title: 'Product',
   type: 'document',
+  icon: RiMacbookLine,
   fields: [
     {
       name: 'title',
@@ -50,7 +53,7 @@ export default {
       name: 'vendor',
       title: 'Vendor',
       type: 'reference',
-      to: {type: 'vendor'},
+      to: { type: 'vendor' },
     },
     {
       name: 'blurb',
@@ -64,7 +67,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: {type: 'category'},
+          to: { type: 'category' },
         },
       ],
     },
