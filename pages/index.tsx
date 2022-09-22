@@ -7,13 +7,15 @@ import { fetchCategories } from 'utils/fetchCategories';
 
 import { Header } from 'components/Header'
 import { Landing } from 'components/Landing'
+import { fetchProducts } from 'utils/fetchProducts';
 
 interface Props{
-  categories: Category[]
+  categories: Category[],
+  products: Product[]
 }
 
-const Home = ({categories}: Props) => {
-  console.log(categories)
+const Home = ({categories, products}: Props) => {
+  console.log(products)
   return (
     <div>
       <Head>
@@ -70,10 +72,13 @@ export default Home
 // backend code for server side rendering
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const categories = await fetchCategories()
+  const products = await fetchProducts()
+
 
   return {
     props: {
-      categories
+      categories,
+      products
     }
   }
 }
