@@ -8,7 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["rb.gy", "apple-redesign-yt.vercel.app"]
+    domains: ["rb.gy", "apple-redesign-yt.vercel.app", "cdn.sanity.io"]
   },
   rewrites: () => [STUDIO_REWRITE]
 }

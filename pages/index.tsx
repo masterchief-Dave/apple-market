@@ -8,21 +8,19 @@ import { fetchCategories } from 'utils/fetchCategories';
 import { Header } from 'components/Header'
 import { Landing } from 'components/Landing'
 import { fetchProducts } from 'utils/fetchProducts';
-import {Product} from 'components/Product'
+import { Product } from 'components/Product'
 
-interface Props{
+interface Props {
   categories: Category[],
   products: Product[]
 }
 
-const Home = ({categories, products}: Props) => {
-  console.log(products)
-  console.log(categories)
+const Home = ({ categories, products }: Props) => {
 
   const showProducts = (category: number) => {
     return products.filter((product) => {
       return product.category._ref === categories[category]._id
-    }).map((product) => <Product key={product._id} product={product}/>)
+    }).map((product) => <Product key={product._id} product={product} />)
   }
   return (
     <div>

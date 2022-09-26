@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3005",
+    "dev": "next dev -p 3007",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -12,6 +12,7 @@
     "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^1.0.6",
     "@portabletext/react": "^1.0.6",
+    "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "next": "12.3.0",
     "next-sanity": "^0.8.4",
@@ -25,6 +26,7 @@
     "autoprefixer": "^10.4.11",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
+    "next-sanity-image": "^4.1.0",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
