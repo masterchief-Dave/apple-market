@@ -1,10 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
+
 import { SearchIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react/outline'
+import { RootState } from 'redux/store'
+import { selectBasketItems } from 'redux/basketSlice'
 
 export const Header = () => {
   const session = false
+
+  // const state  = useSelector((state: RootState) => state.basket.items)
+  const state = useSelector(selectBasketItems)
 
   const signIn = () => { }
 
@@ -27,7 +34,7 @@ export const Header = () => {
         <SearchIcon className='headerIcon' />
         <Link href='/checkout'>
           <div className='relative cursor-pointer'>
-            <span className=' absolute  -right-1 -top-1 z-50 h-4 w-4 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-violet-500 text-[10px]'>5</span>
+            <span className=' absolute  -right-1 -top-1 z-50 h-4 w-4 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-violet-500 text-[10px]'>{state.items.length}</span>
             <ShoppingBagIcon className='headerIcon' />
           </div>
         </Link>
